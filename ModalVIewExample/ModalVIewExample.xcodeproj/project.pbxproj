@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		6B4BCAA31C91D94900D35D40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BCAA21C91D94900D35D40 /* main.m */; };
 		6B4BCAA61C91D94900D35D40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BCAA51C91D94900D35D40 /* AppDelegate.m */; };
-		6B4BCAA91C91D94900D35D40 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BCAA81C91D94900D35D40 /* ViewController.m */; };
 		6B4BCAAC1C91D94900D35D40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4BCAAA1C91D94900D35D40 /* Main.storyboard */; };
 		6B4BCAAE1C91D94900D35D40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B4BCAAD1C91D94900D35D40 /* Assets.xcassets */; };
 		6B4BCAB11C91D94900D35D40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4BCAAF1C91D94900D35D40 /* LaunchScreen.storyboard */; };
+		6B4BCAC41C91D9FF00D35D40 /* DRBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BCABC1C91D9FF00D35D40 /* DRBackgroundView.m */; };
+		6B4BCAC51C91D9FF00D35D40 /* DRBaseModalNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BCABF1C91D9FF00D35D40 /* DRBaseModalNib.m */; };
+		6B4BCAC61C91D9FF00D35D40 /* DRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BCAC31C91D9FF00D35D40 /* DRViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +22,16 @@
 		6B4BCAA21C91D94900D35D40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6B4BCAA41C91D94900D35D40 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6B4BCAA51C91D94900D35D40 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6B4BCAA71C91D94900D35D40 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6B4BCAA81C91D94900D35D40 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6B4BCAAB1C91D94900D35D40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B4BCAAD1C91D94900D35D40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B4BCAB01C91D94900D35D40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B4BCAB21C91D94900D35D40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B4BCABB1C91D9FF00D35D40 /* DRBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBackgroundView.h; sourceTree = "<group>"; };
+		6B4BCABC1C91D9FF00D35D40 /* DRBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBackgroundView.m; sourceTree = "<group>"; };
+		6B4BCABE1C91D9FF00D35D40 /* DRBaseModalNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBaseModalNib.h; sourceTree = "<group>"; };
+		6B4BCABF1C91D9FF00D35D40 /* DRBaseModalNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBaseModalNib.m; sourceTree = "<group>"; };
+		6B4BCAC21C91D9FF00D35D40 /* DRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRViewController.h; sourceTree = "<group>"; };
+		6B4BCAC31C91D9FF00D35D40 /* DRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +64,10 @@
 		6B4BCAA01C91D94900D35D40 /* ModalVIewExample */ = {
 			isa = PBXGroup;
 			children = (
+				6B4BCAB81C91D9FF00D35D40 /* Code */,
+				6B4BCAC01C91D9FF00D35D40 /* Example */,
 				6B4BCAA41C91D94900D35D40 /* AppDelegate.h */,
 				6B4BCAA51C91D94900D35D40 /* AppDelegate.m */,
-				6B4BCAA71C91D94900D35D40 /* ViewController.h */,
-				6B4BCAA81C91D94900D35D40 /* ViewController.m */,
 				6B4BCAAA1C91D94900D35D40 /* Main.storyboard */,
 				6B4BCAAD1C91D94900D35D40 /* Assets.xcassets */,
 				6B4BCAAF1C91D94900D35D40 /* LaunchScreen.storyboard */,
@@ -77,6 +83,58 @@
 				6B4BCAA21C91D94900D35D40 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B4BCAB81C91D9FF00D35D40 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				6B4BCAB91C91D9FF00D35D40 /* BaseModal */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		6B4BCAB91C91D9FF00D35D40 /* BaseModal */ = {
+			isa = PBXGroup;
+			children = (
+				6B4BCABA1C91D9FF00D35D40 /* BackgroundView */,
+				6B4BCABD1C91D9FF00D35D40 /* BaseModalNib */,
+			);
+			path = BaseModal;
+			sourceTree = "<group>";
+		};
+		6B4BCABA1C91D9FF00D35D40 /* BackgroundView */ = {
+			isa = PBXGroup;
+			children = (
+				6B4BCABB1C91D9FF00D35D40 /* DRBackgroundView.h */,
+				6B4BCABC1C91D9FF00D35D40 /* DRBackgroundView.m */,
+			);
+			path = BackgroundView;
+			sourceTree = "<group>";
+		};
+		6B4BCABD1C91D9FF00D35D40 /* BaseModalNib */ = {
+			isa = PBXGroup;
+			children = (
+				6B4BCABE1C91D9FF00D35D40 /* DRBaseModalNib.h */,
+				6B4BCABF1C91D9FF00D35D40 /* DRBaseModalNib.m */,
+			);
+			path = BaseModalNib;
+			sourceTree = "<group>";
+		};
+		6B4BCAC01C91D9FF00D35D40 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				6B4BCAC11C91D9FF00D35D40 /* Controllers */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		6B4BCAC11C91D9FF00D35D40 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6B4BCAC21C91D9FF00D35D40 /* DRViewController.h */,
+				6B4BCAC31C91D9FF00D35D40 /* DRViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +207,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B4BCAA91C91D94900D35D40 /* ViewController.m in Sources */,
 				6B4BCAA61C91D94900D35D40 /* AppDelegate.m in Sources */,
+				6B4BCAC41C91D9FF00D35D40 /* DRBackgroundView.m in Sources */,
+				6B4BCAC51C91D9FF00D35D40 /* DRBaseModalNib.m in Sources */,
+				6B4BCAC61C91D9FF00D35D40 /* DRViewController.m in Sources */,
 				6B4BCAA31C91D94900D35D40 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +360,7 @@
 				6B4BCAB71C91D94900D35D40 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
