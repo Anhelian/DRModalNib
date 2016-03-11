@@ -8,11 +8,11 @@
 
 #import "DRViewController.h"
 
-@interface ViewController ()
+@interface DRViewController ()
 
 @end
 
-@implementation ViewController
+@implementation DRViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
