@@ -7,31 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B4BCAA31C91D94900D35D40 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BCAA21C91D94900D35D40 /* main.m */; };
-		6B4BCAA61C91D94900D35D40 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BCAA51C91D94900D35D40 /* AppDelegate.m */; };
-		6B4BCAAC1C91D94900D35D40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4BCAAA1C91D94900D35D40 /* Main.storyboard */; };
-		6B4BCAAE1C91D94900D35D40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B4BCAAD1C91D94900D35D40 /* Assets.xcassets */; };
-		6B4BCAB11C91D94900D35D40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4BCAAF1C91D94900D35D40 /* LaunchScreen.storyboard */; };
-		6B4BCAC41C91D9FF00D35D40 /* DRBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BCABC1C91D9FF00D35D40 /* DRBackgroundView.m */; };
-		6B4BCAC51C91D9FF00D35D40 /* DRBaseModalNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BCABF1C91D9FF00D35D40 /* DRBaseModalNib.m */; };
-		6B4BCAC61C91D9FF00D35D40 /* DRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B4BCAC31C91D9FF00D35D40 /* DRViewController.m */; };
+		6B7CA3F51C92B84300A5E196 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7CA3E11C92B84300A5E196 /* AppDelegate.m */; };
+		6B7CA3F61C92B84300A5E196 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B7CA3E21C92B84300A5E196 /* Assets.xcassets */; };
+		6B7CA3F71C92B84300A5E196 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B7CA3E31C92B84300A5E196 /* LaunchScreen.storyboard */; };
+		6B7CA3F81C92B84300A5E196 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B7CA3E51C92B84300A5E196 /* Main.storyboard */; };
+		6B7CA3F91C92B84300A5E196 /* DRBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7CA3EB1C92B84300A5E196 /* DRBackgroundView.m */; };
+		6B7CA3FA1C92B84300A5E196 /* DRBaseModalNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7CA3EE1C92B84300A5E196 /* DRBaseModalNib.m */; };
+		6B7CA3FB1C92B84300A5E196 /* DRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7CA3F21C92B84300A5E196 /* DRViewController.m */; };
+		6B7CA3FC1C92B84300A5E196 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B7CA3F31C92B84300A5E196 /* Info.plist */; };
+		6B7CA3FD1C92B84300A5E196 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7CA3F41C92B84300A5E196 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6B4BCA9E1C91D94900D35D40 /* ModalVIewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ModalVIewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		6B4BCAA21C91D94900D35D40 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		6B4BCAA41C91D94900D35D40 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		6B4BCAA51C91D94900D35D40 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6B4BCAAB1C91D94900D35D40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6B4BCAAD1C91D94900D35D40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6B4BCAB01C91D94900D35D40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		6B4BCAB21C91D94900D35D40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B4BCABB1C91D9FF00D35D40 /* DRBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBackgroundView.h; sourceTree = "<group>"; };
-		6B4BCABC1C91D9FF00D35D40 /* DRBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBackgroundView.m; sourceTree = "<group>"; };
-		6B4BCABE1C91D9FF00D35D40 /* DRBaseModalNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBaseModalNib.h; sourceTree = "<group>"; };
-		6B4BCABF1C91D9FF00D35D40 /* DRBaseModalNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBaseModalNib.m; sourceTree = "<group>"; };
-		6B4BCAC21C91D9FF00D35D40 /* DRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRViewController.h; sourceTree = "<group>"; };
-		6B4BCAC31C91D9FF00D35D40 /* DRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRViewController.m; sourceTree = "<group>"; };
+		6B7CA3E01C92B84300A5E196 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6B7CA3E11C92B84300A5E196 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6B7CA3E21C92B84300A5E196 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B7CA3E41C92B84300A5E196 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6B7CA3E61C92B84300A5E196 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6B7CA3EA1C92B84300A5E196 /* DRBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBackgroundView.h; sourceTree = "<group>"; };
+		6B7CA3EB1C92B84300A5E196 /* DRBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBackgroundView.m; sourceTree = "<group>"; };
+		6B7CA3ED1C92B84300A5E196 /* DRBaseModalNib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRBaseModalNib.h; sourceTree = "<group>"; };
+		6B7CA3EE1C92B84300A5E196 /* DRBaseModalNib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRBaseModalNib.m; sourceTree = "<group>"; };
+		6B7CA3F11C92B84300A5E196 /* DRViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRViewController.h; sourceTree = "<group>"; };
+		6B7CA3F21C92B84300A5E196 /* DRViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRViewController.m; sourceTree = "<group>"; };
+		6B7CA3F31C92B84300A5E196 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B7CA3F41C92B84300A5E196 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +49,7 @@
 		6B4BCA951C91D94900D35D40 = {
 			isa = PBXGroup;
 			children = (
-				6B4BCAA01C91D94900D35D40 /* ModalVIewExample */,
+				6B7CA3DF1C92B84300A5E196 /* ModalNib */,
 				6B4BCA9F1C91D94900D35D40 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,78 +62,70 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6B4BCAA01C91D94900D35D40 /* ModalVIewExample */ = {
+		6B7CA3DF1C92B84300A5E196 /* ModalNib */ = {
 			isa = PBXGroup;
 			children = (
-				6B4BCAB81C91D9FF00D35D40 /* Code */,
-				6B4BCAC01C91D9FF00D35D40 /* Example */,
-				6B4BCAA41C91D94900D35D40 /* AppDelegate.h */,
-				6B4BCAA51C91D94900D35D40 /* AppDelegate.m */,
-				6B4BCAAA1C91D94900D35D40 /* Main.storyboard */,
-				6B4BCAAD1C91D94900D35D40 /* Assets.xcassets */,
-				6B4BCAAF1C91D94900D35D40 /* LaunchScreen.storyboard */,
-				6B4BCAB21C91D94900D35D40 /* Info.plist */,
-				6B4BCAA11C91D94900D35D40 /* Supporting Files */,
+				6B7CA3E01C92B84300A5E196 /* AppDelegate.h */,
+				6B7CA3E11C92B84300A5E196 /* AppDelegate.m */,
+				6B7CA3E21C92B84300A5E196 /* Assets.xcassets */,
+				6B7CA3E31C92B84300A5E196 /* LaunchScreen.storyboard */,
+				6B7CA3E51C92B84300A5E196 /* Main.storyboard */,
+				6B7CA3E71C92B84300A5E196 /* Code */,
+				6B7CA3EF1C92B84300A5E196 /* Example */,
+				6B7CA3F31C92B84300A5E196 /* Info.plist */,
+				6B7CA3F41C92B84300A5E196 /* main.m */,
 			);
-			path = ModalVIewExample;
+			path = ModalNib;
 			sourceTree = "<group>";
 		};
-		6B4BCAA11C91D94900D35D40 /* Supporting Files */ = {
+		6B7CA3E71C92B84300A5E196 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				6B4BCAA21C91D94900D35D40 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6B4BCAB81C91D9FF00D35D40 /* Code */ = {
-			isa = PBXGroup;
-			children = (
-				6B4BCAB91C91D9FF00D35D40 /* BaseModal */,
+				6B7CA3E81C92B84300A5E196 /* BaseModal */,
 			);
 			path = Code;
 			sourceTree = "<group>";
 		};
-		6B4BCAB91C91D9FF00D35D40 /* BaseModal */ = {
+		6B7CA3E81C92B84300A5E196 /* BaseModal */ = {
 			isa = PBXGroup;
 			children = (
-				6B4BCABA1C91D9FF00D35D40 /* BackgroundView */,
-				6B4BCABD1C91D9FF00D35D40 /* BaseModalNib */,
+				6B7CA3E91C92B84300A5E196 /* BackgroundView */,
+				6B7CA3EC1C92B84300A5E196 /* BaseModalNib */,
 			);
 			path = BaseModal;
 			sourceTree = "<group>";
 		};
-		6B4BCABA1C91D9FF00D35D40 /* BackgroundView */ = {
+		6B7CA3E91C92B84300A5E196 /* BackgroundView */ = {
 			isa = PBXGroup;
 			children = (
-				6B4BCABB1C91D9FF00D35D40 /* DRBackgroundView.h */,
-				6B4BCABC1C91D9FF00D35D40 /* DRBackgroundView.m */,
+				6B7CA3EA1C92B84300A5E196 /* DRBackgroundView.h */,
+				6B7CA3EB1C92B84300A5E196 /* DRBackgroundView.m */,
 			);
 			path = BackgroundView;
 			sourceTree = "<group>";
 		};
-		6B4BCABD1C91D9FF00D35D40 /* BaseModalNib */ = {
+		6B7CA3EC1C92B84300A5E196 /* BaseModalNib */ = {
 			isa = PBXGroup;
 			children = (
-				6B4BCABE1C91D9FF00D35D40 /* DRBaseModalNib.h */,
-				6B4BCABF1C91D9FF00D35D40 /* DRBaseModalNib.m */,
+				6B7CA3ED1C92B84300A5E196 /* DRBaseModalNib.h */,
+				6B7CA3EE1C92B84300A5E196 /* DRBaseModalNib.m */,
 			);
 			path = BaseModalNib;
 			sourceTree = "<group>";
 		};
-		6B4BCAC01C91D9FF00D35D40 /* Example */ = {
+		6B7CA3EF1C92B84300A5E196 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				6B4BCAC11C91D9FF00D35D40 /* Controllers */,
+				6B7CA3F01C92B84300A5E196 /* Controllers */,
 			);
 			path = Example;
 			sourceTree = "<group>";
 		};
-		6B4BCAC11C91D9FF00D35D40 /* Controllers */ = {
+		6B7CA3F01C92B84300A5E196 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6B4BCAC21C91D9FF00D35D40 /* DRViewController.h */,
-				6B4BCAC31C91D9FF00D35D40 /* DRViewController.m */,
+				6B7CA3F11C92B84300A5E196 /* DRViewController.h */,
+				6B7CA3F21C92B84300A5E196 /* DRViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -194,9 +187,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B4BCAB11C91D94900D35D40 /* LaunchScreen.storyboard in Resources */,
-				6B4BCAAE1C91D94900D35D40 /* Assets.xcassets in Resources */,
-				6B4BCAAC1C91D94900D35D40 /* Main.storyboard in Resources */,
+				6B7CA3F61C92B84300A5E196 /* Assets.xcassets in Resources */,
+				6B7CA3F81C92B84300A5E196 /* Main.storyboard in Resources */,
+				6B7CA3F71C92B84300A5E196 /* LaunchScreen.storyboard in Resources */,
+				6B7CA3FC1C92B84300A5E196 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,31 +201,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B4BCAA61C91D94900D35D40 /* AppDelegate.m in Sources */,
-				6B4BCAC41C91D9FF00D35D40 /* DRBackgroundView.m in Sources */,
-				6B4BCAC51C91D9FF00D35D40 /* DRBaseModalNib.m in Sources */,
-				6B4BCAC61C91D9FF00D35D40 /* DRViewController.m in Sources */,
-				6B4BCAA31C91D94900D35D40 /* main.m in Sources */,
+				6B7CA3FD1C92B84300A5E196 /* main.m in Sources */,
+				6B7CA3FB1C92B84300A5E196 /* DRViewController.m in Sources */,
+				6B7CA3FA1C92B84300A5E196 /* DRBaseModalNib.m in Sources */,
+				6B7CA3F51C92B84300A5E196 /* AppDelegate.m in Sources */,
+				6B7CA3F91C92B84300A5E196 /* DRBackgroundView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6B4BCAAA1C91D94900D35D40 /* Main.storyboard */ = {
+		6B7CA3E31C92B84300A5E196 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6B4BCAAB1C91D94900D35D40 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		6B4BCAAF1C91D94900D35D40 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6B4BCAB01C91D94900D35D40 /* Base */,
+				6B7CA3E41C92B84300A5E196 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		6B7CA3E51C92B84300A5E196 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B7CA3E61C92B84300A5E196 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -323,7 +317,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ModalVIewExample/Info.plist;
+				INFOPLIST_FILE = ModalNib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HOME.ModalVIewExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -334,7 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ModalVIewExample/Info.plist;
+				INFOPLIST_FILE = ModalNib/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HOME.ModalVIewExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

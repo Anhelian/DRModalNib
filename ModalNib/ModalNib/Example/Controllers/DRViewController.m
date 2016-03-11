@@ -6,7 +6,7 @@
 //  Copyright © 2016 Denis Romashow. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "DRViewController.h"
 
 @interface ViewController ()
 
