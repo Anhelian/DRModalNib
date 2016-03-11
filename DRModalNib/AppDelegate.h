@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  ModalVIewExample
+//  DRModalNib
 //
-//  Created by Denis Romashow on 10.03.16.
+//  Created by Denis Romashow on 11.03.16.
 //  Copyright © 2016 Denis Romashow. All rights reserved.
 //
 
