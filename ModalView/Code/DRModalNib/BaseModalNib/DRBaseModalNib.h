@@ -2,8 +2,8 @@
 //  DRBaseModalNib.h
 //  Denis Romashov
 //
-//  Created by Denis Romashov on 22.07.15.
-//  Copyright (c) 2015 InMotion Soft. All rights reserved.
+//  Created by Denis Romashov on 22.07.17.
+//  Copyright (c) 2017 Denis Romashov. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

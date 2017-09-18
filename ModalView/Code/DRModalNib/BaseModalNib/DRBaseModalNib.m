@@ -2,8 +2,8 @@
 //  DRBaseModalNib.m
 //  Denis Romashov
 //
-//  Created by Denis Romashov on 22.07.15.
-//  Copyright (c) 2015 InMotion Soft. All rights reserved.
+//  Created by Denis Romashov on 22.07.17.
+//  Copyright (c) 2017 Denis Romashov. All rights reserved.
 //
 
 #import "DRBaseModalNib.h"
@@ -29,21 +29,12 @@ static CGFloat const kDRDefaultAnimationDuration = 0.33;
     
     self.backgroundView = [DRBackgroundView createView];
     self.backgroundView.delegate = self;
-    if (self.shouldHideByTap) {
-        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touchedBackgroundView)];
-        
-        [self addGestureRecognizer:tapGesture];
-    }
-    
-    
-    [self loadDefaultOptions];
 }
 
-- (void)loadDefaultOptions
+- (BOOL)shouldHideByTap
 {
-    self.shouldHideByTap = YES;
+    return YES;
 }
-
 
 #pragma mark -
 #pragma mark Public methods
@@ -101,7 +92,7 @@ static CGFloat const kDRDefaultAnimationDuration = 0.33;
 #pragma mark -
 #pragma mark KRBaseBackgroundViewDelegate
 
-- (void)backgroundViewWillHide:(DRBackgroundView *)backgroundVew withCompletionBlock:(void (^)())completionBlock
+- (void)backgroundViewWillHide:(DRBackgroundView *)backgroundVew withCompletionBlock:(void (^)(void))completionBlock
 {
     if ([self.baseModalNibDelegate respondsToSelector:@selector(baseModaViewBackgroundDidTapped:)]) {
         [self.baseModalNibDelegate baseModaViewBackgroundDidTapped:self];
@@ -182,21 +173,21 @@ static CGFloat const kDRDefaultAnimationDuration = 0.33;
 
 - (void)showViewAtCenter:(UIView *)baseView
 {
-    [self.backgroundView addConstraint:[NSLayoutConstraint constraintWithItem:self
-                                                                    attribute:(NSLayoutAttributeCenterX)
-                                                                    relatedBy:NSLayoutRelationEqual
-                                                                       toItem:baseView
-                                                                    attribute:NSLayoutAttributeCenterX
-                                                                   multiplier:1
-                                                                     constant:0]];
-    
-    [self.backgroundView addConstraint:[NSLayoutConstraint constraintWithItem:self
-                                                                    attribute:(NSLayoutAttributeCenterY)
-                                                                    relatedBy:NSLayoutRelationEqual
-                                                                       toItem:baseView
-                                                                    attribute:NSLayoutAttributeCenterY
-                                                                   multiplier:1
-                                                                     constant:0]];
+//    [self.backgroundView addConstraint:[NSLayoutConstraint constraintWithItem:self
+//                                                                    attribute:(NSLayoutAttributeCenterX)
+//                                                                    relatedBy:NSLayoutRelationEqual
+//                                                                       toItem:baseView
+//                                                                    attribute:NSLayoutAttributeCenterX
+//                                                                   multiplier:1
+//                                                                     constant:0]];
+//
+//    [self.backgroundView addConstraint:[NSLayoutConstraint constraintWithItem:self
+//                                                                    attribute:(NSLayoutAttributeCenterY)
+//                                                                    relatedBy:NSLayoutRelationEqual
+//                                                                       toItem:baseView
+//                                                                    attribute:NSLayoutAttributeCenterY
+//                                                                   multiplier:1
+//                                                                     constant:0]];
     switch (self.animationType) {
         case DRBaseModalAnimationFadeIn:
             [self produceFadeInAnimation];

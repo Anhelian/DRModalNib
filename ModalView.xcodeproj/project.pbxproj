@@ -14,8 +14,6 @@
 		6B33A2351F6F3C2D0029378E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B33A2331F6F3C2D0029378E /* LaunchScreen.storyboard */; };
 		6B33A24E1F6F3EFF0029378E /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B33A24D1F6F3EFF0029378E /* ModalView.swift */; };
 		6B33A2501F6F3F070029378E /* ModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B33A24F1F6F3F070029378E /* ModalView.xib */; };
-		6B33A2511F6F423E0029378E /* DRBaseModalNib.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B33A24B1F6F3E6F0029378E /* DRBaseModalNib.m */; };
-		6B33A2521F6F42430029378E /* DRBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B33A2481F6F3E630029378E /* DRBackgroundView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,13 +24,13 @@
 		6B33A2311F6F3C2D0029378E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B33A2341F6F3C2D0029378E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B33A2361F6F3C2D0029378E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6B33A2471F6F3E620029378E /* ModalView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ModalView-Bridging-Header.h"; sourceTree = "<group>"; };
-		6B33A2481F6F3E630029378E /* DRBackgroundView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRBackgroundView.m; sourceTree = "<group>"; };
-		6B33A2491F6F3E630029378E /* DRBackgroundView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRBackgroundView.h; sourceTree = "<group>"; };
-		6B33A24A1F6F3E6F0029378E /* DRBaseModalNib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRBaseModalNib.h; sourceTree = "<group>"; };
-		6B33A24B1F6F3E6F0029378E /* DRBaseModalNib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRBaseModalNib.m; sourceTree = "<group>"; };
 		6B33A24D1F6F3EFF0029378E /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		6B33A24F1F6F3F070029378E /* ModalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ModalView.xib; sourceTree = "<group>"; };
+		6B9A20C91F6F549700452774 /* DRBaseModalNib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRBaseModalNib.h; sourceTree = "<group>"; };
+		6B9A20CA1F6F549700452774 /* DRBaseModalNib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRBaseModalNib.m; sourceTree = "<group>"; };
+		6B9A20CC1F6F549700452774 /* DRBackgroundView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRBackgroundView.m; sourceTree = "<group>"; };
+		6B9A20CD1F6F549700452774 /* ModalView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ModalView-Bridging-Header.h"; sourceTree = "<group>"; };
+		6B9A20CE1F6F549700452774 /* DRBackgroundView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRBackgroundView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,37 +78,9 @@
 		6B33A23C1F6F3C3B0029378E /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				6B33A23D1F6F3C430029378E /* DRBaseModalNib */,
+				6B9A20C71F6F549700452774 /* DRModalNib */,
 			);
 			path = Code;
-			sourceTree = "<group>";
-		};
-		6B33A23D1F6F3C430029378E /* DRBaseModalNib */ = {
-			isa = PBXGroup;
-			children = (
-				6B33A23E1F6F3C430029378E /* BaseModalNib */,
-				6B33A2411F6F3C430029378E /* BackgroundView */,
-			);
-			path = DRBaseModalNib;
-			sourceTree = "<group>";
-		};
-		6B33A23E1F6F3C430029378E /* BaseModalNib */ = {
-			isa = PBXGroup;
-			children = (
-				6B33A24A1F6F3E6F0029378E /* DRBaseModalNib.h */,
-				6B33A24B1F6F3E6F0029378E /* DRBaseModalNib.m */,
-			);
-			path = BaseModalNib;
-			sourceTree = "<group>";
-		};
-		6B33A2411F6F3C430029378E /* BackgroundView */ = {
-			isa = PBXGroup;
-			children = (
-				6B33A2491F6F3E630029378E /* DRBackgroundView.h */,
-				6B33A2481F6F3E630029378E /* DRBackgroundView.m */,
-				6B33A2471F6F3E620029378E /* ModalView-Bridging-Header.h */,
-			);
-			path = BackgroundView;
 			sourceTree = "<group>";
 		};
 		6B33A2451F6F3DAC0029378E /* Example */ = {
@@ -136,6 +106,34 @@
 				6B33A24F1F6F3F070029378E /* ModalView.xib */,
 			);
 			path = ModalView;
+			sourceTree = "<group>";
+		};
+		6B9A20C71F6F549700452774 /* DRModalNib */ = {
+			isa = PBXGroup;
+			children = (
+				6B9A20C81F6F549700452774 /* BaseModalNib */,
+				6B9A20CB1F6F549700452774 /* BackgroundView */,
+			);
+			path = DRModalNib;
+			sourceTree = "<group>";
+		};
+		6B9A20C81F6F549700452774 /* BaseModalNib */ = {
+			isa = PBXGroup;
+			children = (
+				6B9A20C91F6F549700452774 /* DRBaseModalNib.h */,
+				6B9A20CA1F6F549700452774 /* DRBaseModalNib.m */,
+			);
+			path = BaseModalNib;
+			sourceTree = "<group>";
+		};
+		6B9A20CB1F6F549700452774 /* BackgroundView */ = {
+			isa = PBXGroup;
+			children = (
+				6B9A20CC1F6F549700452774 /* DRBackgroundView.m */,
+				6B9A20CD1F6F549700452774 /* ModalView-Bridging-Header.h */,
+				6B9A20CE1F6F549700452774 /* DRBackgroundView.h */,
+			);
+			path = BackgroundView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,9 +212,7 @@
 			files = (
 				6B33A24E1F6F3EFF0029378E /* ModalView.swift in Sources */,
 				6B33A22D1F6F3C2D0029378E /* ViewController.swift in Sources */,
-				6B33A2511F6F423E0029378E /* DRBaseModalNib.m in Sources */,
 				6B33A22B1F6F3C2D0029378E /* AppDelegate.swift in Sources */,
-				6B33A2521F6F42430029378E /* DRBackgroundView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
