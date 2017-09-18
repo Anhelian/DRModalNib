@@ -16,11 +16,9 @@ static CGFloat const kDRDefaultAnimationDuration = 0.33;
 {
     self = [super initWithFrame:frame];
     if (self) {
-        self.shouldHideByTap = YES;
+//        self.shouldHideByTap = YES;
         
-        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touchedBackgroundView)];
         
-        [self addGestureRecognizer:tapGesture];
     }
     
     return self;
@@ -35,10 +33,19 @@ static CGFloat const kDRDefaultAnimationDuration = 0.33;
 #pragma mark -
 #pragma mark Public Methods
 
-- (void)showWithCompletionBlock:(void (^)())completionBlock
+- (void)showOnView:(UIView *)presentationView withCompletionBlock:(void (^)())completionBlock
 {
-    [[[UIApplication sharedApplication] keyWindow] addSubview:self];
-
+    if (!presentationView) {
+        [[[UIApplication sharedApplication] keyWindow] addSubview:self];
+    } else {
+        [presentationView addSubview:self];
+    }
+    
+    if (self.shouldHideByTap) {
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touchedBackgroundView)];
+        
+        [self addGestureRecognizer:tapGesture];
+    }
     
     UIColor *finalColor = (self.presentedColor) ? self.presentedColor : [UIColor colorWithWhite:0 alpha:0.5];
     self.backgroundColor = [UIColor clearColor];

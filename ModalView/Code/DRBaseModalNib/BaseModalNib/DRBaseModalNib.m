@@ -16,6 +16,7 @@ static CGFloat const kDRDefaultAnimationDuration = 0.33;
 @property (nonatomic, strong) DRBackgroundView *backgroundView;
 @property (nonatomic, assign) BOOL shouldHideProgrammatically;
 @property (nonatomic, assign) DRBaseModalAnimation animationType;
+@property (nonatomic, assign) DRBaseModalPosition position;
 @property (nonatomic, assign) BOOL isVisible;
 
 @end
@@ -28,6 +29,12 @@ static CGFloat const kDRDefaultAnimationDuration = 0.33;
     
     self.backgroundView = [DRBackgroundView createView];
     self.backgroundView.delegate = self;
+    if (self.shouldHideByTap) {
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(touchedBackgroundView)];
+        
+        [self addGestureRecognizer:tapGesture];
+    }
+    
     
     [self loadDefaultOptions];
 }
@@ -50,11 +57,13 @@ static CGFloat const kDRDefaultAnimationDuration = 0.33;
 {
     self.shouldHideProgrammatically = NO;
     self.animationType = animationType;
+    self.position = viewPosition;
+    [self scaleView];
     
     self.backgroundView.presentedColor = self.modaBackgroundColor;
     self.backgroundView.shouldHideByTap = self.shouldHideByTap;
     
-    [self.backgroundView showWithCompletionBlock:nil];
+    [self.backgroundView showOnView:nil withCompletionBlock:nil];
     
     [self presentNidOnView:self.backgroundView withPosition:viewPosition];
 }
@@ -63,19 +72,29 @@ static CGFloat const kDRDefaultAnimationDuration = 0.33;
 {    
     self.shouldHideProgrammatically = NO;
     self.animationType = animationType;
+    self.position = viewPosition;
+    [self scaleView];
+    
+    self.backgroundView.presentedColor = self.modaBackgroundColor;
+    self.backgroundView.shouldHideByTap = self.shouldHideByTap;
+    
+    [self.backgroundView showOnView:baseView withCompletionBlock:nil];
     
     [self presentNidOnView:baseView withPosition:viewPosition];
 }
 
 - (void)hide
 {
-    [self hidePrivate];
-
-    if ([self.backgroundView.subviews containsObject:self]) {
-        self.shouldHideProgrammatically = YES;
-        self.backgroundView.shouldHideByTap = YES;
-        [self.backgroundView touchedBackgroundView];
-    }
+    __weak DRBaseModalNib *weakSelf = self;
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [weakSelf hidePrivate];
+        
+        if (weakSelf.backgroundView) {
+            weakSelf.shouldHideProgrammatically = YES;
+            weakSelf.backgroundView.shouldHideByTap = YES;
+            [weakSelf.backgroundView touchedBackgroundView];
+        }
+    });
 }
 
 
@@ -107,6 +126,10 @@ static CGFloat const kDRDefaultAnimationDuration = 0.33;
     
     CGRect deepRect = self.frame;
     deepRect.origin.y = baseView.bounds.size.height;
+    if (viewPosition == DRBaseModalPositionCenter) {
+        deepRect.origin.x = (baseView.frame.size.width-self.frame.size.width)/2; //move to correct x position if Presented view Smaller than width
+    }
+    
     self.frame = deepRect;
     [baseView addSubview:self];
     
@@ -127,20 +150,34 @@ static CGFloat const kDRDefaultAnimationDuration = 0.33;
 
 - (void)showViewAtTop
 {
-    CGRect inViewRect = self.frame;
-    inViewRect.origin = CGPointZero;
+    CGRect initialRect = self.frame;
+    initialRect.origin.x = ([UIScreen mainScreen].bounds.size.width-self.self.frame.size.width)/2;
+    initialRect.origin.y = -self.frame.size.height;
+    self.frame = initialRect;
     
+    CGRect inViewRect = self.frame;
+    inViewRect.origin.y = 0;
+    inViewRect.origin.x = ([UIScreen mainScreen].bounds.size.width-self.self.frame.size.width)/2;
     __weak DRBaseModalNib *weakSelf = self;
-    [UIView animateWithDuration:kDRDefaultAnimationDuration animations:^{
-        weakSelf.frame = inViewRect;
-    }];
+    
+    if (self.animationType != DRBaseModalAnimationNone) {
+        [UIView animateWithDuration:kDRDefaultAnimationDuration animations:^{
+            weakSelf.frame = inViewRect;
+        }];
+    } else {
+        self.frame = inViewRect;
+    }
 }
 
 - (void)showViewAtBottom:(UIView *)baseView
 {
     CGRect inViewRect = self.frame;
     inViewRect.origin.y = baseView.bounds.size.height - self.frame.size.height;
-    [self producePopUpAnimationWithFinalRect:inViewRect];
+    if (self.animationType != DRBaseModalAnimationNone) {
+        [self producePopUpAnimationWithFinalRect:inViewRect];
+    } else {
+        self.frame = inViewRect;
+    }
 }
 
 - (void)showViewAtCenter:(UIView *)baseView
@@ -165,7 +202,10 @@ static CGFloat const kDRDefaultAnimationDuration = 0.33;
             [self produceFadeInAnimation];
             break;
         case DRBaseModalAnimationPopUp:
-            [self producePopUpAnimationWithFinalRect:baseView.frame];
+            [self producePopUpAnimationWithFinalRect:CGRectMake((baseView.frame.size.width-self.frame.size.width)/2,
+                                                                (baseView.frame.size.height-self.frame.size.height)/2,
+                                                                self.frame.size.width,
+                                                                self.frame.size.height)];
             break;
         case DRBaseModalAnimationNone:
             self.frame = baseView.frame;
@@ -194,11 +234,27 @@ static CGFloat const kDRDefaultAnimationDuration = 0.33;
     }
     
     self.isVisible = NO;
+    [self endEditing:YES];
 }
 
+- (void)touchedBackgroundView
+{
+    
+}
 
-#pragma mark -
-#pragma mark Animation Methods
+- (void)scaleView
+{
+    CGPoint actualCenter = self.center;
+    CGRect actualFrame = self.frame;
+    CGFloat width = [UIScreen mainScreen].bounds.size.width - (375 - self.frame.size.width);
+    actualFrame.size.width = width;
+    actualCenter.x = [UIScreen mainScreen].bounds.size.width/2;
+    
+    self.frame = actualFrame;
+    self.center = actualCenter;
+}
+
+#pragma mark - Animation Methods
 
 - (void)produceFadeInAnimation
 {
@@ -232,7 +288,7 @@ static CGFloat const kDRDefaultAnimationDuration = 0.33;
 - (void)produceDropDownAnimation
 {
     CGRect deepRect = self.frame;
-    deepRect.origin.y = self.backgroundView.bounds.size.height;
+    deepRect.origin.y = (self.position == DRBaseModalPositionTop) ? -self.frame.size.height : self.backgroundView.bounds.size.height;
     
     __weak DRBaseModalNib *weakSelf = self;
     [UIView animateWithDuration:kDRDefaultAnimationDuration animations:^{

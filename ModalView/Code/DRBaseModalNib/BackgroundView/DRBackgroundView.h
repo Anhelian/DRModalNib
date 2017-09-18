@@ -24,7 +24,7 @@
 
 + (DRBackgroundView *)createView;
 
-- (void)showWithCompletionBlock:(void(^)())completionBlock;
+- (void)showOnView:(UIView *)presentationView withCompletionBlock:(void (^)())completionBlock;
 - (void)touchedBackgroundView;
 
 @end
